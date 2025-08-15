@@ -172,7 +172,7 @@ a {
 .slide__image img {
   object-fit: cover;
   height: 100vh;
-  width: auto;
+  width: 100vw;
 }
 
 .overlay {
@@ -329,10 +329,6 @@ a {
   .slide__link--icon {
     width: 18px;
     height: auto;
-  }
-
-  .slide__image img {
-    width: 100vw;
   }
 
   .guidance {
