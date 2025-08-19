@@ -43,10 +43,6 @@ body {
   user-select: none;
 }
 
-main {
-  touch-action: none;
-}
-
 a {
   text-decoration: none;
   -webkit-tap-highlight-color: transparent;
@@ -153,6 +149,7 @@ a {
 }
 
 .slide__image {
+  touch-action: none;
   pointer-events: none;
   position: absolute;
   inset: 0 auto auto 0;
@@ -167,6 +164,7 @@ a {
 }
 
 .glitch {
+  touch-action: none;
   pointer-events: none;
   position: absolute;
   z-index: -1;

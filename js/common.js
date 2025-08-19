@@ -92,7 +92,7 @@
     }
 
     Observer.create({
-      type: "wheel,touch,pointer",
+      type: "wheel,touch",
       preventDefault: true,
       wheelSpeed: -1,
       onUp: () => {
