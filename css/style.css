@@ -121,7 +121,6 @@ a {
 
 .slide__button {
   margin-top: 14px;
-  background-color: #fff;
   border-radius: 2px;
   max-width: 210px;
   overflow: hidden;
@@ -138,6 +137,7 @@ a {
   font-size: 16px;
   font-weight: 700;
   color: #333;
+  background-color: #fff;
 }
 
 .slide__link--icon {
@@ -149,6 +149,7 @@ a {
 }
 
 .slide__image {
+  pointer-events: none;
   position: absolute;
   inset: 0 auto auto 0;
   z-index: -1;
@@ -162,6 +163,7 @@ a {
 }
 
 .glitch {
+  pointer-events: none;
   position: absolute;
   z-index: -1;
   inset: 0;
@@ -490,6 +492,30 @@ a {
 }
 
 @media screen and (min-width: 1024px) {
+  .slide__link {
+    position: relative;
+    z-index: 1;
+  }
+
+  .slide__link--bg {
+    content: "";
+    position: absolute;
+    top: -50vh;
+    left: -50vw;
+    z-index: 0;
+    width: 200vw;
+    height: 200vh;
+    opacity: 0;
+    pointer-events: none;
+    background-color: #333;
+    transition: opacity .3s linear;
+  }
+
+  .slide__link:hover + .slide__link--bg,
+  .slide__link:focus + .slide__link--bg {
+    opacity: .5;
+  }
+
   .overlay {
     display: block;
     position: fixed;
