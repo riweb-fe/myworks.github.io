@@ -149,8 +149,6 @@ a {
 }
 
 .slide__image {
-  touch-action: none;
-  pointer-events: none;
   position: absolute;
   inset: 0 auto auto 0;
   z-index: -1;
@@ -164,8 +162,6 @@ a {
 }
 
 .glitch {
-  touch-action: none;
-  pointer-events: none;
   position: absolute;
   z-index: -1;
   inset: 0;
