@@ -149,7 +149,7 @@ a {
 }
 
 .slide__image {
-  pointer-events: none;
+  touch-action: none;
   position: absolute;
   inset: 0 auto auto 0;
   z-index: -1;
@@ -163,7 +163,7 @@ a {
 }
 
 .glitch {
-  pointer-events: none;
+  touch-action: none;
   position: absolute;
   z-index: -1;
   inset: 0;
