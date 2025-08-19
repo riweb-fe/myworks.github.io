@@ -7,7 +7,7 @@
 ---------------------------------- */
 
 * {
-  font-size: 12px;
+  font-size: 14px;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -62,6 +62,7 @@ a {
 ---------------------------------- */
 
 .slide {
+  touch-action: none;
   height: 100%;
   width: 100%;
   top: 0;
@@ -149,7 +150,7 @@ a {
 }
 
 .slide__image {
-  touch-action: none;
+  pointer-events: none;
   position: absolute;
   inset: 0 auto auto 0;
   z-index: -1;
@@ -163,7 +164,7 @@ a {
 }
 
 .glitch {
-  touch-action: none;
+  pointer-events: none;
   position: absolute;
   z-index: -1;
   inset: 0;
