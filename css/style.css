@@ -90,6 +90,8 @@ a {
 }
 
 .slide__heading {
+  touch-action: none;
+  pointer-events: none;
   max-width: 460px;
   display: block;
   text-transform: uppercase;
@@ -111,6 +113,8 @@ a {
 }
 
 .slide__detail {
+  touch-action: none;
+  pointer-events: none;
   margin-top: 16px;
   text-shadow: 1px 1px 4px #333;
 }
@@ -149,6 +153,8 @@ a {
 }
 
 .slide__image {
+  touch-action: none;
+  pointer-events: none;
   position: absolute;
   inset: 0 auto auto 0;
   z-index: -1;
@@ -162,6 +168,8 @@ a {
 }
 
 .glitch {
+  touch-action: none;
+  pointer-events: none;
   position: absolute;
   z-index: -1;
   inset: 0;
