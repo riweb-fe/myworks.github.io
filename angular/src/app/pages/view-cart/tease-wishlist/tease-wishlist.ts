@@ -1,0 +1,33 @@
+import { Component, inject } from '@angular/core';
+import { ViewPanel } from "../../../directives/view-panel";
+import { MatIcon } from "@angular/material/icon";
+import { EcommerceStore } from '../../../ecommerce-store';
+import { MatButton } from "@angular/material/button";
+import { RouterLink } from "@angular/router";
+
+@Component({
+  selector: 'app-tease-wishlist',
+  imports: [ViewPanel, MatIcon, MatButton, RouterLink],
+  template: `
+    <div appViewPanel class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+      <div class="flex items-center gap-3">
+        <mat-icon class="!text-red-500">favorite_border</mat-icon>
+        <div>
+          <h2 class="text-xl font-bold mb-1">お気に入り（{{ store.wishlistCount() }}点）</h2>
+          <p class="text-gray-500 text-sm">後で保存できるアイテムが{{ store.wishlistCount() }}点あります</p>
+        </div>
+      </div>
+      <div class="flex flex-col items-center gap-4 md:flex-row">
+        <button matButton routerLink="/wishlist">全て表示する</button>
+        <button matButton="filled" class="flex items-center gap-2" (click)="store.addAllWishlistToCart()">
+          <mat-icon>shopping_cart</mat-icon>
+          全てカートに追加する
+        </button>
+      </div>
+    </div>
+  `,
+  styles: ``,
+})
+export class TeaseWishlist {
+  store = inject(EcommerceStore);
+}
